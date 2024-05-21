@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style.css">
+    <script type="module" src="./src/app.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <img src="./images/back.png" id="backbtn"/>
+        <div class="carousel">
+            <div class="items-container">
+                <canvas class="item-container" id="canvas1"></canvas>
+                <canvas class="item-container" id="canvas2"></canvas>
+            </div>
+            <div class="items-container">
+                <canvas class="item-container" id="canvas3"></canvas>
+                <canvas class="item-container" id="canvas4"></canvas>
+            </div>
+        </div>
+        <img src="./images/next.png" id="nextbtn"/>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <p id="closePopupBtn" class="close">x</p>
+            <p class="description" id="popupDescription">...</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
