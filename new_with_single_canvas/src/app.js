@@ -26,7 +26,7 @@ loadModels(paths).then((models) => {
 function init(models) {
 	canvas = document.getElementById('c');
 
-	const content = document.getElementById('content');
+	// const content = document.getElementById('content');
 
 	for (let i = 0; i < models.length; i++) {
 
@@ -34,15 +34,15 @@ function init(models) {
 		const model = models[i];
 
 		// make a list item
-		const element = document.createElement('div');
-		element.className = 'list-item';
+		const firstDiv = document.createElement('div');
+		firstDiv.className = 'list-item';
 
-		const sceneElement = document.createElement('div');
-		element.appendChild(sceneElement);
+		const sceneDiv = document.createElement('div');
+		firstDiv.appendChild(sceneDiv);
 
 		// the element that represents the area we want to render the scene
-		scene.userData.element = sceneElement;
-		content.appendChild(element);
+		scene.userData.element = sceneDiv;
+		content.appendChild(firstDiv);
 
 		// Get the bounding box of the model and calculate its size, calculate the distance based on average length.
 		const box = new THREE.Box3().setFromObject(model);
@@ -119,7 +119,7 @@ function render() {
 	updateSize();
 
 
-	renderer.setClearColor(0xffffff);
+	renderer.setClearColor(0x909090);
 	renderer.setScissorTest(false);
 	renderer.clear();
 
